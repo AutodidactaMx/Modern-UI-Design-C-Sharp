@@ -13,10 +13,6 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
 {
     public partial class FormMain : Form
     {
-        //Fields
-        private int borderSize = 2;
-        private Size formSize; //Keep form size when it is minimized and restored.Since the form is resized because it takes into account the size of the title bar and borders.
-
         [DllImport("user32.dll", EntryPoint = "ReleaseCapture")]
         private extern static void ReleaseCapture();
 
@@ -26,8 +22,8 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
         public FormMain()
         {
             InitializeComponent();
-            this.Padding = new Padding(borderSize);//Border size
-            this.BackColor = Color.FromArgb(98, 102, 244);//Border color
+            this.Padding = new Padding(2);
+            this.BackColor = Color.FromArgb(0, 0, 0);
         }
 
         private void iconButtonClose_Click(object sender, EventArgs e)
@@ -59,13 +55,11 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-
-        //Overridden methods
+        
         protected override void WndProc(ref Message m)
         {
             const int WM_NCCALCSIZE = 0x0083;//Standar Title Bar - Snap Window
            
-
             //Remove border and keep snap window
             if (m.Msg == WM_NCCALCSIZE && m.WParam.ToInt32() == 1)
             {
