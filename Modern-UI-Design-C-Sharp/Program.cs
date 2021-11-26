@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Modern_UI_Design_C_Sharp.FormDesign;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -16,7 +17,7 @@ namespace Modern_UI_Design_C_Sharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new FormMaster());
+            Application.Run(new FormMain());
         }
     }
 }
