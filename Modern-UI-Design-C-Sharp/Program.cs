@@ -16,7 +16,7 @@ namespace Modern_UI_Design_C_Sharp
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new Form1());
+            Application.Run(new FormMaster());
         }
     }
 }
