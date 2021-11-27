@@ -43,9 +43,9 @@
             // 
             this.ContentFormPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.ContentFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContentFormPanel.Location = new System.Drawing.Point(0, 29);
+            this.ContentFormPanel.Location = new System.Drawing.Point(0, 40);
             this.ContentFormPanel.Name = "ContentFormPanel";
-            this.ContentFormPanel.Size = new System.Drawing.Size(800, 421);
+            this.ContentFormPanel.Size = new System.Drawing.Size(800, 410);
             this.ContentFormPanel.TabIndex = 4;
             // 
             // PanelFormBar
@@ -55,7 +55,7 @@
             this.PanelFormBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelFormBar.Location = new System.Drawing.Point(0, 0);
             this.PanelFormBar.Name = "PanelFormBar";
-            this.PanelFormBar.Size = new System.Drawing.Size(800, 29);
+            this.PanelFormBar.Size = new System.Drawing.Size(800, 40);
             this.PanelFormBar.TabIndex = 3;
             this.PanelFormBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelFormBar_MouseDown);
             // 
@@ -68,7 +68,7 @@
             this.PanelFormAction.Dock = System.Windows.Forms.DockStyle.Right;
             this.PanelFormAction.Location = new System.Drawing.Point(622, 0);
             this.PanelFormAction.Name = "PanelFormAction";
-            this.PanelFormAction.Size = new System.Drawing.Size(178, 29);
+            this.PanelFormAction.Size = new System.Drawing.Size(178, 40);
             this.PanelFormAction.TabIndex = 0;
             // 
             // iconButtonMinus
@@ -83,7 +83,7 @@
             this.iconButtonMinus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.iconButtonMinus.Location = new System.Drawing.Point(30, 0);
             this.iconButtonMinus.Name = "iconButtonMinus";
-            this.iconButtonMinus.Size = new System.Drawing.Size(37, 29);
+            this.iconButtonMinus.Size = new System.Drawing.Size(37, 40);
             this.iconButtonMinus.TabIndex = 1;
             this.iconButtonMinus.UseMnemonic = false;
             this.iconButtonMinus.UseVisualStyleBackColor = true;
@@ -101,7 +101,7 @@
             this.iconButtonPlus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.iconButtonPlus.Location = new System.Drawing.Point(67, 0);
             this.iconButtonPlus.Name = "iconButtonPlus";
-            this.iconButtonPlus.Size = new System.Drawing.Size(37, 29);
+            this.iconButtonPlus.Size = new System.Drawing.Size(37, 40);
             this.iconButtonPlus.TabIndex = 2;
             this.iconButtonPlus.UseMnemonic = false;
             this.iconButtonPlus.UseVisualStyleBackColor = true;
@@ -119,7 +119,7 @@
             this.iconButtonNormal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.iconButtonNormal.Location = new System.Drawing.Point(104, 0);
             this.iconButtonNormal.Name = "iconButtonNormal";
-            this.iconButtonNormal.Size = new System.Drawing.Size(37, 29);
+            this.iconButtonNormal.Size = new System.Drawing.Size(37, 40);
             this.iconButtonNormal.TabIndex = 3;
             this.iconButtonNormal.UseMnemonic = false;
             this.iconButtonNormal.UseVisualStyleBackColor = true;
@@ -138,7 +138,7 @@
             this.iconButtonClose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.iconButtonClose.Location = new System.Drawing.Point(141, 0);
             this.iconButtonClose.Name = "iconButtonClose";
-            this.iconButtonClose.Size = new System.Drawing.Size(37, 29);
+            this.iconButtonClose.Size = new System.Drawing.Size(37, 40);
             this.iconButtonClose.TabIndex = 0;
             this.iconButtonClose.UseMnemonic = false;
             this.iconButtonClose.UseVisualStyleBackColor = true;
@@ -153,6 +153,7 @@
             this.Controls.Add(this.ContentFormPanel);
             this.Controls.Add(this.PanelFormBar);
             this.Name = "FormMain";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
             this.PanelFormBar.ResumeLayout(false);
             this.PanelFormAction.ResumeLayout(false);

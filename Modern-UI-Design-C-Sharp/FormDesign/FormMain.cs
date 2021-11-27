@@ -18,7 +18,8 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
 
         [DllImport("user32.DLL", EntryPoint = "SendMessage")]
         private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
-        
+        private Padding borderNormal = new Padding(2);
+        private Padding borderMaximized = new Padding(2, 9, 2, 2);
         public FormMain()
         {
             InitializeComponent();
@@ -36,6 +37,7 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
             iconButtonNormal.Visible = false;
             iconButtonPlus.Visible = true;
             this.WindowState = FormWindowState.Normal;
+            this.Padding = borderNormal;
         }
 
         private void iconButtonMinus_Click(object sender, EventArgs e)
@@ -48,6 +50,7 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
             this.WindowState = FormWindowState.Maximized;
             iconButtonNormal.Visible = true;
             iconButtonPlus.Visible = false;
+            this.Padding = borderMaximized;
         }
 
         private void PanelFormBar_MouseDown(object sender, MouseEventArgs e)
@@ -55,14 +58,22 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
-        
+
         protected override void WndProc(ref Message m)
         {
             const int WM_NCCALCSIZE = 0x0083;//Standar Title Bar - Snap Window
-           
+
             //Remove border and keep snap window
             if (m.Msg == WM_NCCALCSIZE && m.WParam.ToInt32() == 1)
             {
+                if (this.WindowState == FormWindowState.Maximized)
+                {
+                    this.Padding = borderMaximized;
+                }
+                if (this.WindowState == FormWindowState.Normal)
+                {
+                    this.Padding = borderNormal;
+                }
                 return;
             }
             base.WndProc(ref m);
