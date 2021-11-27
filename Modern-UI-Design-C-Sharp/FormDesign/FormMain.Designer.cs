@@ -31,7 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.ContentFormPanel = new System.Windows.Forms.Panel();
             this.PanelFormBar = new System.Windows.Forms.Panel();
-            this.PanelHeader = new System.Windows.Forms.Panel();
+            this.PanelHeaderCaption = new System.Windows.Forms.Panel();
             this.LabelTitle = new System.Windows.Forms.Label();
             this.PanelFormAction = new System.Windows.Forms.Panel();
             this.iconButtonMinus = new FontAwesome.Sharp.IconButton();
@@ -40,7 +40,7 @@
             this.iconButtonClose = new FontAwesome.Sharp.IconButton();
             this.PictureIconForm = new System.Windows.Forms.PictureBox();
             this.PanelFormBar.SuspendLayout();
-            this.PanelHeader.SuspendLayout();
+            this.PanelHeaderCaption.SuspendLayout();
             this.PanelFormAction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureIconForm)).BeginInit();
             this.SuspendLayout();
@@ -57,7 +57,7 @@
             // PanelFormBar
             // 
             this.PanelFormBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(51)))), ((int)(((byte)(53)))));
-            this.PanelFormBar.Controls.Add(this.PanelHeader);
+            this.PanelFormBar.Controls.Add(this.PanelHeaderCaption);
             this.PanelFormBar.Controls.Add(this.PanelFormAction);
             this.PanelFormBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelFormBar.Location = new System.Drawing.Point(0, 0);
@@ -66,16 +66,16 @@
             this.PanelFormBar.TabIndex = 3;
             this.PanelFormBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindows_MouseDown);
             // 
-            // PanelHeader
+            // PanelHeaderCaption
             // 
-            this.PanelHeader.Controls.Add(this.PictureIconForm);
-            this.PanelHeader.Controls.Add(this.LabelTitle);
-            this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelHeader.Location = new System.Drawing.Point(0, 0);
-            this.PanelHeader.Name = "PanelHeader";
-            this.PanelHeader.Size = new System.Drawing.Size(146, 30);
-            this.PanelHeader.TabIndex = 1;
-            this.PanelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindows_MouseDown);
+            this.PanelHeaderCaption.Controls.Add(this.PictureIconForm);
+            this.PanelHeaderCaption.Controls.Add(this.LabelTitle);
+            this.PanelHeaderCaption.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelHeaderCaption.Location = new System.Drawing.Point(0, 0);
+            this.PanelHeaderCaption.Name = "PanelHeaderCaption";
+            this.PanelHeaderCaption.Size = new System.Drawing.Size(146, 30);
+            this.PanelHeaderCaption.TabIndex = 1;
+            this.PanelHeaderCaption.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindows_MouseDown);
             // 
             // LabelTitle
             // 
@@ -203,8 +203,8 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
             this.PanelFormBar.ResumeLayout(false);
-            this.PanelHeader.ResumeLayout(false);
-            this.PanelHeader.PerformLayout();
+            this.PanelHeaderCaption.ResumeLayout(false);
+            this.PanelHeaderCaption.PerformLayout();
             this.PanelFormAction.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureIconForm)).EndInit();
             this.ResumeLayout(false);
@@ -220,7 +220,7 @@
         private FontAwesome.Sharp.IconButton iconButtonPlus;
         private FontAwesome.Sharp.IconButton iconButtonNormal;
         private FontAwesome.Sharp.IconButton iconButtonClose;
-        private System.Windows.Forms.Panel PanelHeader;
+        private System.Windows.Forms.Panel PanelHeaderCaption;
         private System.Windows.Forms.Label LabelTitle;
         private System.Windows.Forms.PictureBox PictureIconForm;
     }
