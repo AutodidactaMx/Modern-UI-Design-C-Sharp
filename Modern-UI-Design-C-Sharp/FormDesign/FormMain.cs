@@ -23,9 +23,7 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
         public FormMain()
         {
             InitializeComponent();
-            this.Padding = new Padding(2);
-            this.BackColor = Color.FromArgb(0, 0, 0);
-
+            this.Padding = new Padding(2);            
         }
 
         private void iconButtonClose_Click(object sender, EventArgs e)

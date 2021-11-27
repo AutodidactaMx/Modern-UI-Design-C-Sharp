@@ -29,30 +29,20 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
-            this.ContentFormPanel = new System.Windows.Forms.Panel();
             this.PanelFormBar = new System.Windows.Forms.Panel();
             this.PanelHeaderCaption = new System.Windows.Forms.Panel();
+            this.PictureIconForm = new System.Windows.Forms.PictureBox();
             this.LabelTitle = new System.Windows.Forms.Label();
             this.PanelFormAction = new System.Windows.Forms.Panel();
             this.iconButtonMinus = new FontAwesome.Sharp.IconButton();
             this.iconButtonPlus = new FontAwesome.Sharp.IconButton();
             this.iconButtonNormal = new FontAwesome.Sharp.IconButton();
             this.iconButtonClose = new FontAwesome.Sharp.IconButton();
-            this.PictureIconForm = new System.Windows.Forms.PictureBox();
             this.PanelFormBar.SuspendLayout();
             this.PanelHeaderCaption.SuspendLayout();
-            this.PanelFormAction.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureIconForm)).BeginInit();
+            this.PanelFormAction.SuspendLayout();
             this.SuspendLayout();
-            // 
-            // ContentFormPanel
-            // 
-            this.ContentFormPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
-            this.ContentFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContentFormPanel.Location = new System.Drawing.Point(0, 30);
-            this.ContentFormPanel.Name = "ContentFormPanel";
-            this.ContentFormPanel.Size = new System.Drawing.Size(800, 420);
-            this.ContentFormPanel.TabIndex = 4;
             // 
             // PanelFormBar
             // 
@@ -76,6 +66,17 @@
             this.PanelHeaderCaption.Size = new System.Drawing.Size(146, 30);
             this.PanelHeaderCaption.TabIndex = 1;
             this.PanelHeaderCaption.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindows_MouseDown);
+            // 
+            // PictureIconForm
+            // 
+            this.PictureIconForm.BackgroundImage = global::Modern_UI_Design_C_Sharp.Properties.Resources.Autodidacta_cuadro;
+            this.PictureIconForm.Image = ((System.Drawing.Image)(resources.GetObject("PictureIconForm.Image")));
+            this.PictureIconForm.Location = new System.Drawing.Point(4, 2);
+            this.PictureIconForm.Name = "PictureIconForm";
+            this.PictureIconForm.Size = new System.Drawing.Size(25, 25);
+            this.PictureIconForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureIconForm.TabIndex = 1;
+            this.PictureIconForm.TabStop = false;
             // 
             // LabelTitle
             // 
@@ -178,24 +179,12 @@
             this.iconButtonClose.UseVisualStyleBackColor = true;
             this.iconButtonClose.Click += new System.EventHandler(this.iconButtonClose_Click);
             // 
-            // PictureIconForm
-            // 
-            this.PictureIconForm.BackgroundImage = global::Modern_UI_Design_C_Sharp.Properties.Resources.Autodidacta_cuadro;
-            this.PictureIconForm.Image = ((System.Drawing.Image)(resources.GetObject("PictureIconForm.Image")));
-            this.PictureIconForm.Location = new System.Drawing.Point(4, 2);
-            this.PictureIconForm.Name = "PictureIconForm";
-            this.PictureIconForm.Size = new System.Drawing.Size(25, 25);
-            this.PictureIconForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.PictureIconForm.TabIndex = 1;
-            this.PictureIconForm.TabStop = false;
-            // 
             // FormMain
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.ContentFormPanel);
             this.Controls.Add(this.PanelFormBar);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
@@ -205,15 +194,13 @@
             this.PanelFormBar.ResumeLayout(false);
             this.PanelHeaderCaption.ResumeLayout(false);
             this.PanelHeaderCaption.PerformLayout();
-            this.PanelFormAction.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureIconForm)).EndInit();
+            this.PanelFormAction.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Panel ContentFormPanel;
         private System.Windows.Forms.Panel PanelFormBar;
         private System.Windows.Forms.Panel PanelFormAction;
         private FontAwesome.Sharp.IconButton iconButtonMinus;
