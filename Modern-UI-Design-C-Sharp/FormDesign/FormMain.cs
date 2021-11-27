@@ -22,9 +22,10 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
         private Padding borderMaximized = new Padding(2, 9, 2, 2);
         public FormMain()
         {
-            InitializeComponent();
+            InitializeComponent();            
             this.Padding = new Padding(2);
             this.BackColor = Color.FromArgb(0, 0, 0);
+
         }
 
         private void iconButtonClose_Click(object sender, EventArgs e)
@@ -34,10 +35,7 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
 
         private void iconButtonNormal_Click(object sender, EventArgs e)
         {
-            iconButtonNormal.Visible = false;
-            iconButtonPlus.Visible = true;
-            this.WindowState = FormWindowState.Normal;
-            this.Padding = borderNormal;
+            NormalAction();
         }
 
         private void iconButtonMinus_Click(object sender, EventArgs e)
@@ -47,13 +45,10 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
 
         private void iconButtonPlus_Click(object sender, EventArgs e)
         {
-            this.WindowState = FormWindowState.Maximized;
-            iconButtonNormal.Visible = true;
-            iconButtonPlus.Visible = false;
-            this.Padding = borderMaximized;
+            MaximizedAction();
         }
 
-        private void PanelFormBar_MouseDown(object sender, MouseEventArgs e)
+        private void MoveWindows_MouseDown(object sender, MouseEventArgs e)
         {
             ReleaseCapture();
             SendMessage(this.Handle, 0x112, 0xf012, 0);
@@ -68,15 +63,33 @@ namespace Modern_UI_Design_C_Sharp.FormDesign
             {
                 if (this.WindowState == FormWindowState.Maximized)
                 {
-                    this.Padding = borderMaximized;
+                    this.Padding = borderMaximized;                    
                 }
                 if (this.WindowState == FormWindowState.Normal)
                 {
-                    this.Padding = borderNormal;
+                    this.Padding = borderNormal;                    
                 }
                 return;
-            }
+            }            
             base.WndProc(ref m);
         }
+
+        private void MaximizedAction()
+        {
+            this.WindowState = FormWindowState.Maximized;
+            iconButtonNormal.Visible = true;
+            iconButtonPlus.Visible = false;
+            this.Padding = borderMaximized;            
+        }
+        private void NormalAction()
+        {
+            iconButtonNormal.Visible = false;
+            iconButtonPlus.Visible = true;
+            this.WindowState = FormWindowState.Normal;
+            this.Padding = borderNormal;            
+        }
+
+
+        
     }
 }

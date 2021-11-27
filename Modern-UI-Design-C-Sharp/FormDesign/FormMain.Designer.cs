@@ -28,36 +28,69 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMain));
             this.ContentFormPanel = new System.Windows.Forms.Panel();
             this.PanelFormBar = new System.Windows.Forms.Panel();
+            this.PanelHeader = new System.Windows.Forms.Panel();
+            this.LabelTitle = new System.Windows.Forms.Label();
             this.PanelFormAction = new System.Windows.Forms.Panel();
             this.iconButtonMinus = new FontAwesome.Sharp.IconButton();
             this.iconButtonPlus = new FontAwesome.Sharp.IconButton();
             this.iconButtonNormal = new FontAwesome.Sharp.IconButton();
             this.iconButtonClose = new FontAwesome.Sharp.IconButton();
+            this.PictureIconForm = new System.Windows.Forms.PictureBox();
             this.PanelFormBar.SuspendLayout();
+            this.PanelHeader.SuspendLayout();
             this.PanelFormAction.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureIconForm)).BeginInit();
             this.SuspendLayout();
             // 
             // ContentFormPanel
             // 
             this.ContentFormPanel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(170)))), ((int)(((byte)(170)))), ((int)(((byte)(170)))));
             this.ContentFormPanel.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.ContentFormPanel.Location = new System.Drawing.Point(0, 40);
+            this.ContentFormPanel.Location = new System.Drawing.Point(0, 30);
             this.ContentFormPanel.Name = "ContentFormPanel";
-            this.ContentFormPanel.Size = new System.Drawing.Size(800, 410);
+            this.ContentFormPanel.Size = new System.Drawing.Size(800, 420);
             this.ContentFormPanel.TabIndex = 4;
             // 
             // PanelFormBar
             // 
             this.PanelFormBar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(50)))), ((int)(((byte)(51)))), ((int)(((byte)(53)))));
+            this.PanelFormBar.Controls.Add(this.PanelHeader);
             this.PanelFormBar.Controls.Add(this.PanelFormAction);
             this.PanelFormBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.PanelFormBar.Location = new System.Drawing.Point(0, 0);
             this.PanelFormBar.Name = "PanelFormBar";
-            this.PanelFormBar.Size = new System.Drawing.Size(800, 40);
+            this.PanelFormBar.Size = new System.Drawing.Size(800, 30);
             this.PanelFormBar.TabIndex = 3;
-            this.PanelFormBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.PanelFormBar_MouseDown);
+            this.PanelFormBar.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindows_MouseDown);
+            // 
+            // PanelHeader
+            // 
+            this.PanelHeader.Controls.Add(this.PictureIconForm);
+            this.PanelHeader.Controls.Add(this.LabelTitle);
+            this.PanelHeader.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelHeader.Location = new System.Drawing.Point(0, 0);
+            this.PanelHeader.Name = "PanelHeader";
+            this.PanelHeader.Size = new System.Drawing.Size(146, 30);
+            this.PanelHeader.TabIndex = 1;
+            this.PanelHeader.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindows_MouseDown);
+            // 
+            // LabelTitle
+            // 
+            this.LabelTitle.AutoSize = true;
+            this.LabelTitle.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.LabelTitle.Font = new System.Drawing.Font("Arial Narrow", 12F);
+            this.LabelTitle.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.LabelTitle.Location = new System.Drawing.Point(35, 5);
+            this.LabelTitle.Margin = new System.Windows.Forms.Padding(0);
+            this.LabelTitle.Name = "LabelTitle";
+            this.LabelTitle.Size = new System.Drawing.Size(102, 20);
+            this.LabelTitle.TabIndex = 0;
+            this.LabelTitle.Text = "Autodidacta MX";
+            this.LabelTitle.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.LabelTitle.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindows_MouseDown);
             // 
             // PanelFormAction
             // 
@@ -66,10 +99,11 @@
             this.PanelFormAction.Controls.Add(this.iconButtonNormal);
             this.PanelFormAction.Controls.Add(this.iconButtonClose);
             this.PanelFormAction.Dock = System.Windows.Forms.DockStyle.Right;
-            this.PanelFormAction.Location = new System.Drawing.Point(622, 0);
+            this.PanelFormAction.Location = new System.Drawing.Point(643, 0);
             this.PanelFormAction.Name = "PanelFormAction";
-            this.PanelFormAction.Size = new System.Drawing.Size(178, 40);
+            this.PanelFormAction.Size = new System.Drawing.Size(157, 30);
             this.PanelFormAction.TabIndex = 0;
+            this.PanelFormAction.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindows_MouseDown);
             // 
             // iconButtonMinus
             // 
@@ -81,9 +115,9 @@
             this.iconButtonMinus.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButtonMinus.IconSize = 25;
             this.iconButtonMinus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.iconButtonMinus.Location = new System.Drawing.Point(30, 0);
+            this.iconButtonMinus.Location = new System.Drawing.Point(9, 0);
             this.iconButtonMinus.Name = "iconButtonMinus";
-            this.iconButtonMinus.Size = new System.Drawing.Size(37, 40);
+            this.iconButtonMinus.Size = new System.Drawing.Size(37, 30);
             this.iconButtonMinus.TabIndex = 1;
             this.iconButtonMinus.UseMnemonic = false;
             this.iconButtonMinus.UseVisualStyleBackColor = true;
@@ -99,9 +133,9 @@
             this.iconButtonPlus.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButtonPlus.IconSize = 25;
             this.iconButtonPlus.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.iconButtonPlus.Location = new System.Drawing.Point(67, 0);
+            this.iconButtonPlus.Location = new System.Drawing.Point(46, 0);
             this.iconButtonPlus.Name = "iconButtonPlus";
-            this.iconButtonPlus.Size = new System.Drawing.Size(37, 40);
+            this.iconButtonPlus.Size = new System.Drawing.Size(37, 30);
             this.iconButtonPlus.TabIndex = 2;
             this.iconButtonPlus.UseMnemonic = false;
             this.iconButtonPlus.UseVisualStyleBackColor = true;
@@ -117,9 +151,9 @@
             this.iconButtonNormal.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButtonNormal.IconSize = 25;
             this.iconButtonNormal.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.iconButtonNormal.Location = new System.Drawing.Point(104, 0);
+            this.iconButtonNormal.Location = new System.Drawing.Point(83, 0);
             this.iconButtonNormal.Name = "iconButtonNormal";
-            this.iconButtonNormal.Size = new System.Drawing.Size(37, 40);
+            this.iconButtonNormal.Size = new System.Drawing.Size(37, 30);
             this.iconButtonNormal.TabIndex = 3;
             this.iconButtonNormal.UseMnemonic = false;
             this.iconButtonNormal.UseVisualStyleBackColor = true;
@@ -136,13 +170,24 @@
             this.iconButtonClose.IconFont = FontAwesome.Sharp.IconFont.Solid;
             this.iconButtonClose.IconSize = 25;
             this.iconButtonClose.ImeMode = System.Windows.Forms.ImeMode.NoControl;
-            this.iconButtonClose.Location = new System.Drawing.Point(141, 0);
+            this.iconButtonClose.Location = new System.Drawing.Point(120, 0);
             this.iconButtonClose.Name = "iconButtonClose";
-            this.iconButtonClose.Size = new System.Drawing.Size(37, 40);
+            this.iconButtonClose.Size = new System.Drawing.Size(37, 30);
             this.iconButtonClose.TabIndex = 0;
             this.iconButtonClose.UseMnemonic = false;
             this.iconButtonClose.UseVisualStyleBackColor = true;
             this.iconButtonClose.Click += new System.EventHandler(this.iconButtonClose_Click);
+            // 
+            // PictureIconForm
+            // 
+            this.PictureIconForm.BackgroundImage = global::Modern_UI_Design_C_Sharp.Properties.Resources.Autodidacta_cuadro;
+            this.PictureIconForm.Image = ((System.Drawing.Image)(resources.GetObject("PictureIconForm.Image")));
+            this.PictureIconForm.Location = new System.Drawing.Point(4, 2);
+            this.PictureIconForm.Name = "PictureIconForm";
+            this.PictureIconForm.Size = new System.Drawing.Size(25, 25);
+            this.PictureIconForm.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.PictureIconForm.TabIndex = 1;
+            this.PictureIconForm.TabStop = false;
             // 
             // FormMain
             // 
@@ -152,11 +197,16 @@
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.ContentFormPanel);
             this.Controls.Add(this.PanelFormBar);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FormMain";
+            this.Opacity = 0.96D;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "FormMain";
             this.PanelFormBar.ResumeLayout(false);
+            this.PanelHeader.ResumeLayout(false);
+            this.PanelHeader.PerformLayout();
             this.PanelFormAction.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureIconForm)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -170,5 +220,8 @@
         private FontAwesome.Sharp.IconButton iconButtonPlus;
         private FontAwesome.Sharp.IconButton iconButtonNormal;
         private FontAwesome.Sharp.IconButton iconButtonClose;
+        private System.Windows.Forms.Panel PanelHeader;
+        private System.Windows.Forms.Label LabelTitle;
+        private System.Windows.Forms.PictureBox PictureIconForm;
     }
 }
