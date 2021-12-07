@@ -29,27 +29,27 @@
         private void InitializeComponent()
         {
             this.PanelSlideMenu = new System.Windows.Forms.Panel();
-            this.PanelSlideMenuImage = new System.Windows.Forms.Panel();
-            this.PanelSubMenuCatalogo = new System.Windows.Forms.Panel();
-            this.PanelNav = new System.Windows.Forms.Panel();
-            this.PanelNavTitle = new System.Windows.Forms.Panel();
             this.iconSettings = new FontAwesome.Sharp.IconButton();
+            this.PanelSubMenuCatalogo = new System.Windows.Forms.Panel();
             this.iconInfo = new FontAwesome.Sharp.IconButton();
             this.iconPicture = new FontAwesome.Sharp.IconButton();
             this.iconProfile = new FontAwesome.Sharp.IconButton();
             this.iconDashboard = new FontAwesome.Sharp.IconButton();
+            this.PanelSlideMenuImage = new System.Windows.Forms.Panel();
             this.PictureBoxImg = new System.Windows.Forms.PictureBox();
+            this.PanelNav = new System.Windows.Forms.Panel();
+            this.iconLogo = new FontAwesome.Sharp.IconButton();
             this.iconBar = new FontAwesome.Sharp.IconButton();
+            this.PanelNavTitle = new System.Windows.Forms.Panel();
             this.labelTitle = new System.Windows.Forms.Label();
             this.PanelContent = new System.Windows.Forms.Panel();
             this.PictureLogo = new System.Windows.Forms.PictureBox();
-            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.PanelSlideMenu.SuspendLayout();
-            this.PanelSlideMenuImage.SuspendLayout();
             this.PanelSubMenuCatalogo.SuspendLayout();
+            this.PanelSlideMenuImage.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImg)).BeginInit();
             this.PanelNav.SuspendLayout();
             this.PanelNavTitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImg)).BeginInit();
             this.PanelContent.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).BeginInit();
             this.SuspendLayout();
@@ -67,48 +67,6 @@
             this.PanelSlideMenu.Name = "PanelSlideMenu";
             this.PanelSlideMenu.Size = new System.Drawing.Size(170, 589);
             this.PanelSlideMenu.TabIndex = 0;
-            // 
-            // PanelSlideMenuImage
-            // 
-            this.PanelSlideMenuImage.Controls.Add(this.PictureBoxImg);
-            this.PanelSlideMenuImage.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSlideMenuImage.Location = new System.Drawing.Point(0, 0);
-            this.PanelSlideMenuImage.Name = "PanelSlideMenuImage";
-            this.PanelSlideMenuImage.Size = new System.Drawing.Size(170, 134);
-            this.PanelSlideMenuImage.TabIndex = 1;
-            // 
-            // PanelSubMenuCatalogo
-            // 
-            this.PanelSubMenuCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
-            this.PanelSubMenuCatalogo.Controls.Add(this.iconInfo);
-            this.PanelSubMenuCatalogo.Controls.Add(this.iconPicture);
-            this.PanelSubMenuCatalogo.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelSubMenuCatalogo.Location = new System.Drawing.Point(0, 212);
-            this.PanelSubMenuCatalogo.Name = "PanelSubMenuCatalogo";
-            this.PanelSubMenuCatalogo.Size = new System.Drawing.Size(170, 84);
-            this.PanelSubMenuCatalogo.TabIndex = 4;
-            // 
-            // PanelNav
-            // 
-            this.PanelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(41)))));
-            this.PanelNav.Controls.Add(this.iconButton1);
-            this.PanelNav.Controls.Add(this.iconBar);
-            this.PanelNav.Controls.Add(this.PanelNavTitle);
-            this.PanelNav.Dock = System.Windows.Forms.DockStyle.Top;
-            this.PanelNav.Location = new System.Drawing.Point(0, 0);
-            this.PanelNav.Name = "PanelNav";
-            this.PanelNav.Size = new System.Drawing.Size(973, 46);
-            this.PanelNav.TabIndex = 1;
-            this.PanelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindowsMouseDown);
-            // 
-            // PanelNavTitle
-            // 
-            this.PanelNavTitle.Controls.Add(this.labelTitle);
-            this.PanelNavTitle.Dock = System.Windows.Forms.DockStyle.Left;
-            this.PanelNavTitle.Location = new System.Drawing.Point(0, 0);
-            this.PanelNavTitle.Name = "PanelNavTitle";
-            this.PanelNavTitle.Size = new System.Drawing.Size(177, 46);
-            this.PanelNavTitle.TabIndex = 0;
             // 
             // iconSettings
             // 
@@ -130,6 +88,17 @@
             this.iconSettings.Text = "           Settings";
             this.iconSettings.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconSettings.UseVisualStyleBackColor = true;
+            // 
+            // PanelSubMenuCatalogo
+            // 
+            this.PanelSubMenuCatalogo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(152)))), ((int)(((byte)(219)))));
+            this.PanelSubMenuCatalogo.Controls.Add(this.iconInfo);
+            this.PanelSubMenuCatalogo.Controls.Add(this.iconPicture);
+            this.PanelSubMenuCatalogo.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelSubMenuCatalogo.Location = new System.Drawing.Point(0, 212);
+            this.PanelSubMenuCatalogo.Name = "PanelSubMenuCatalogo";
+            this.PanelSubMenuCatalogo.Size = new System.Drawing.Size(170, 84);
+            this.PanelSubMenuCatalogo.TabIndex = 4;
             // 
             // iconInfo
             // 
@@ -216,6 +185,15 @@
             this.iconDashboard.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconDashboard.UseVisualStyleBackColor = true;
             // 
+            // PanelSlideMenuImage
+            // 
+            this.PanelSlideMenuImage.Controls.Add(this.PictureBoxImg);
+            this.PanelSlideMenuImage.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelSlideMenuImage.Location = new System.Drawing.Point(0, 0);
+            this.PanelSlideMenuImage.Name = "PanelSlideMenuImage";
+            this.PanelSlideMenuImage.Size = new System.Drawing.Size(170, 134);
+            this.PanelSlideMenuImage.TabIndex = 1;
+            // 
             // PictureBoxImg
             // 
             this.PictureBoxImg.Image = global::Modern_UI_Design_C_Sharp.Properties.Resources.Perfil;
@@ -225,6 +203,39 @@
             this.PictureBoxImg.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.PictureBoxImg.TabIndex = 1;
             this.PictureBoxImg.TabStop = false;
+            // 
+            // PanelNav
+            // 
+            this.PanelNav.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(35)))), ((int)(((byte)(41)))));
+            this.PanelNav.Controls.Add(this.iconLogo);
+            this.PanelNav.Controls.Add(this.iconBar);
+            this.PanelNav.Controls.Add(this.PanelNavTitle);
+            this.PanelNav.Dock = System.Windows.Forms.DockStyle.Top;
+            this.PanelNav.Location = new System.Drawing.Point(0, 0);
+            this.PanelNav.Name = "PanelNav";
+            this.PanelNav.Size = new System.Drawing.Size(973, 46);
+            this.PanelNav.TabIndex = 1;
+            this.PanelNav.MouseDown += new System.Windows.Forms.MouseEventHandler(this.MoveWindowsMouseDown);
+            // 
+            // iconLogo
+            // 
+            this.iconLogo.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconLogo.FlatAppearance.BorderSize = 0;
+            this.iconLogo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconLogo.ForeColor = System.Drawing.Color.White;
+            this.iconLogo.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
+            this.iconLogo.IconColor = System.Drawing.Color.White;
+            this.iconLogo.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconLogo.IconSize = 30;
+            this.iconLogo.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconLogo.Location = new System.Drawing.Point(936, 0);
+            this.iconLogo.Margin = new System.Windows.Forms.Padding(0);
+            this.iconLogo.Name = "iconLogo";
+            this.iconLogo.Size = new System.Drawing.Size(37, 46);
+            this.iconLogo.TabIndex = 4;
+            this.iconLogo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconLogo.UseVisualStyleBackColor = true;
+            this.iconLogo.Click += new System.EventHandler(this.iconButton1_Click);
             // 
             // iconBar
             // 
@@ -237,7 +248,7 @@
             this.iconBar.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.iconBar.IconSize = 30;
             this.iconBar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconBar.Location = new System.Drawing.Point(177, 0);
+            this.iconBar.Location = new System.Drawing.Point(170, 0);
             this.iconBar.Margin = new System.Windows.Forms.Padding(0);
             this.iconBar.Name = "iconBar";
             this.iconBar.Size = new System.Drawing.Size(37, 46);
@@ -245,6 +256,15 @@
             this.iconBar.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconBar.UseVisualStyleBackColor = true;
             this.iconBar.Click += new System.EventHandler(this.iconBar_Click);
+            // 
+            // PanelNavTitle
+            // 
+            this.PanelNavTitle.Controls.Add(this.labelTitle);
+            this.PanelNavTitle.Dock = System.Windows.Forms.DockStyle.Left;
+            this.PanelNavTitle.Location = new System.Drawing.Point(0, 0);
+            this.PanelNavTitle.Name = "PanelNavTitle";
+            this.PanelNavTitle.Size = new System.Drawing.Size(170, 46);
+            this.PanelNavTitle.TabIndex = 0;
             // 
             // labelTitle
             // 
@@ -277,26 +297,6 @@
             this.PictureLogo.TabIndex = 0;
             this.PictureLogo.TabStop = false;
             // 
-            // iconButton1
-            // 
-            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconButton1.FlatAppearance.BorderSize = 0;
-            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton1.ForeColor = System.Drawing.Color.White;
-            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.WindowClose;
-            this.iconButton1.IconColor = System.Drawing.Color.White;
-            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconButton1.IconSize = 30;
-            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.Location = new System.Drawing.Point(936, 0);
-            this.iconButton1.Margin = new System.Windows.Forms.Padding(0);
-            this.iconButton1.Name = "iconButton1";
-            this.iconButton1.Size = new System.Drawing.Size(37, 46);
-            this.iconButton1.TabIndex = 4;
-            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton1.UseVisualStyleBackColor = true;
-            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click);
-            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -309,12 +309,12 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.PanelSlideMenu.ResumeLayout(false);
-            this.PanelSlideMenuImage.ResumeLayout(false);
             this.PanelSubMenuCatalogo.ResumeLayout(false);
+            this.PanelSlideMenuImage.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImg)).EndInit();
             this.PanelNav.ResumeLayout(false);
             this.PanelNavTitle.ResumeLayout(false);
             this.PanelNavTitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.PictureBoxImg)).EndInit();
             this.PanelContent.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.PictureLogo)).EndInit();
             this.ResumeLayout(false);
@@ -338,6 +338,6 @@
         private System.Windows.Forms.Label labelTitle;
         private System.Windows.Forms.Panel PanelContent;
         private System.Windows.Forms.PictureBox PictureLogo;
-        private FontAwesome.Sharp.IconButton iconButton1;
+        private FontAwesome.Sharp.IconButton iconLogo;
     }
 }
